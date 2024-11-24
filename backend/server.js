@@ -3,8 +3,14 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const path = require('path');
-dotenv.config();
+
+// Explicitly load the .env file from the backend folder
+dotenv.config({ path: path.join(__dirname, '.env') });
+
 const app = express();
+
+// Check if the environment variable for MongoDB is loaded correctly
+console.log('Mongo URI:', process.env.MONGO_URI);
 
 // Serve static files from the uploads folder
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
@@ -24,3 +30,11 @@ app.use('/api/posts', postRoutes);
 
 // Export Express app for Vercel
 module.exports = app;
+
+// If running locally or in dev mode, listen to the server
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 5000;
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
