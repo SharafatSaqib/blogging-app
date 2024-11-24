@@ -1,0 +1,96 @@
+/* Post Page Styles */
+.postContainer {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .postTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .postImage {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  
+  .postDescription {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .postContent {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+  }
+  
+  /* Like Button Styles */
+  .likeContainer {
+    margin-top: 20px;
+  }
+  
+  .likeButton {
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+  }
+  
+  .likeButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .liked {
+    background-color: #333;
+  }
+  
+  @media (max-width: 768px) {
+    .postTitle {
+      font-size: 2rem;
+    }
+  
+    .postDescription, .postContent {
+      font-size: 1rem;
+    }
+  
+    .postContainer {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .postTitle {
+      font-size: 1.8rem;
+    }
+  
+    .postDescription, .postContent {
+      font-size: 0.9rem;
+    }
+  
+    .postImage {
+      max-width: 100%;
+    }
+  }
+  
